@@ -19,6 +19,12 @@ B) node dist/
 Respaldo en git:
 <!--  -->
 git init
+git status
+git add .
+git commit -m "Mensaje para identificar el commit"
+<!-- (En caso de error y borrar algun archivo o carppeta) -->
+git checkout -- .
+
 <!--  -->
 
 
