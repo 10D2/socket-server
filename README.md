@@ -27,6 +27,20 @@ E) git checkout -- .
 
 ```
 
+<!-- Creando TAGS -->
+
+```
+git tag
+
+git tag -a v1.1.0 -m "REST Server listo"
+
+git push --tags 
+
+git tag
+```
+
+
+
 
 
 
