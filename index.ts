@@ -5,13 +5,11 @@ import cors from 'cors'
 
 
 
+const server = Server.instance
 
-
-const server = new Server()
 
 
 //Middleware
-
 // BODY-PARSER
 server.app.use(bodyParser.urlencoded({extended: true}))
 server.app.use(bodyParser.json())
