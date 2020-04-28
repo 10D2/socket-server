@@ -1,7 +1,11 @@
 import express from 'express'
-import SERVER_PORT from '../dist/environment';
+import SERVER_PORT from '../global/environment';
 import socketIO from 'socket.io'
 import http from 'http'
+
+// Importar los sockets
+
+import * as socket from '../sockets/sockets'
 
 
 
@@ -34,9 +38,14 @@ class Server {
 
     // Escuchar sockets
     private escucharSockets() {
-        console.log('Escuchando conexiones - sockets')
+        console.log('Escuchando conexiones - sockets-SERVER')
+
         this.io.on('connection', cliente => {
             console.log(`Cliente conectado`)
+
+            socket.mensaje(cliente, this.io)
+        // desconectar
+        socket.desconectar(cliente)
         })
     }
 
